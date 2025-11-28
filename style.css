@@ -1,0 +1,197 @@
+/* ========================= */
+/* THEME VARIABLES */
+/* ========================= */
+
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #03045e;
+    --heading-color: #023e8a;
+    --text-color: #1a1a1a;
+    --light-bg: #f5f7fa;
+    --white: #ffffff;
+    --font-stack: 'Roboto', sans-serif;
+
+    --spacing-sm: 10px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+}
+
+/* ========================= */
+/* GLOBAL STYLES */
+/* ========================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-stack);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    padding-top: 90px;
+    line-height: 1.7;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Sticky header class (added by script.js) */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================= */
+/* CONTENT CARD */
+/* ========================= */
+
+.content-section {
+    max-width: 900px;
+    margin: var(--spacing-xl) auto;
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* ========================= */
+/* HEADINGS */
+/* ========================= */
+
+h2 {
+    color: var(--heading-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--primary-color);
+    margin-top: var(--spacing-lg);
+}
+
+/* ========================= */
+/* BIO SECTION */
+/* ========================= */
+
+.bio-intro p {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.05rem;
+}
+
+.key-interests {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: var(--spacing-md) 0;
+}
+
+.key-interests li {
+    background: #e0ecff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #023e8a;
+}
+
+/* ========================= */
+/* SKILLS LIST (USED IN RESUME PAGE TOO) */
+/* ========================= */
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-list li {
+    background: #edf2f7;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: var(--spacing-xl);
+}
+
+/* ========================= */
+/* RESPONSIVE STYLES */
+/* ========================= */
+
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-section {
+        margin: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+}
